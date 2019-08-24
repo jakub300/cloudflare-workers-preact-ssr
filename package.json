@@ -1,0 +1,31 @@
+{
+  "name": "cloudflare-workers-preact-ssr",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Jakub Bogucki",
+  "license": "ISC",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "parcel-build": "parcel build client/index.html",
+    "now-build": "yarn parcel-build",
+    "build-worker": "rollup -c ./worker/rollup.config.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-syntax-jsx": "^7.2.0",
+    "@babel/plugin-transform-react-jsx": "^7.3.0",
+    "parcel-bundler": "^1.12.3",
+    "preact-render-to-string": "^4.1.0",
+    "prettier": "^1.18.2",
+    "rollup": "^1.20.1",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-node-resolve": "^5.2.0"
+  },
+  "dependencies": {
+    "preact": "^8.5.2"
+  },
+  "engines": {
+    "node": "10.x"
+  }
+}

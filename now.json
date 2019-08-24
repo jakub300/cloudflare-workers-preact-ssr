@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "server/server.js",
+      "use": "@now/node",
+      "config": { "includeFiles": ["dist/index.html"] }
+    },
+    { "src": "dist/**/*", "use": "@now/static" }
+  ],
+  "routes": [
+    { "src": "/", "dest": "server/server.js" },
+    { "src": "/(.*)", "dest": "dist/$1" }
+  ]
+}
